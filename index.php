@@ -14,9 +14,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-body">
-                            <form class="form-inline" action="getForm.php" method="post">
+
+                            <form class="form-inline justify-content-center" action="getForm.php" method="post">
+                                <span class="badge badge-secondary"><h4>Jedno ze 2 poniżej to prawdziwe zdjęcie (kolorowe bez modyfikacji) ,<br> drugie to czarno-białe zdjęcie pokolorowane przez komputer. Wskaż prawdziwe zdjęcie.</h4></span>
+
                                 <?php
                                 require_once "./formCreator.php";
 
@@ -80,7 +83,7 @@
                                 }
 
                                 ?>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block marginTop">Send</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block marginTop">Prześlij</button>
                             </form>
                         </div>
                     </div>
