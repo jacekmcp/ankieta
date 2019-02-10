@@ -8,17 +8,23 @@ class sqlHandler{
     private $dbName = "ankieta_kasi";
 
     private $conn;
+    private $algType;
 
     /**
      * sqlHandler constructor.
      * @param $conn
      */
     public function __construct(){
+
         $this->conn = mysqli_connect($this->servername, $this->username, $this->password);
-            
+
+
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }
+
+
+        $this->algType = $this->getAlgTypeFromDB();
     }
 
 
@@ -69,6 +75,39 @@ class sqlHandler{
 
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAlgType()
+    {
+        return $this->algType;
+    }
+
+
+    public function getAlgTypeFromDB(){
+
+        $q = "SELECT * FROM ankieta_kasi.results";
+
+
+        $result = $this->conn->query($q);
+
+
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $truth = $row['truth'];
+                $recolorized = $row['recolorized'];
+
+                $count = $truth + $recolorized;
+
+                if($count < 480) return $row['algType'];
+            }
+
+        die('ankieta juz sie zakonczyla, czekamy na wyniki a Jacek to super mega software developer :)');
+        } else {
+            echo "0 results";
+        }
+    }
 
 
 }

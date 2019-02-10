@@ -15,8 +15,15 @@ class formCreator
 
     public function createForm(){
 
-        return $this->getPhotosNODB('Zhang');
+        require_once "sqlHandler.php";
 
+        $sqlHandler = new sqlHandler();
+
+
+        $algType = $sqlHandler->getAlgType();
+
+
+        return $this->getPhotosNODB($algType);
     }
 
 

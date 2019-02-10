@@ -25,7 +25,10 @@ require_once "sqlHandler.php";
 $sqlHandler = new sqlHandler();
 
 
-$algorithm = 'Zhang';
+$algorithm = $sqlHandler->getAlgType();
 
 $sqlHandler->updateResults($truth, $recolorized, $algorithm);
+
+header("Location: thanks.html");
+die();
 
