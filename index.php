@@ -16,75 +16,75 @@
                 <div class="col-sm">
                     <div class="card">
                         <div class="card-body">
-
-                            <form class="form-inline justify-content-center" action="getForm.php" method="post">
-                                <span class="badge badge-secondary"><h4>Jedno ze 2 poniżej to prawdziwe zdjęcie (kolorowe bez modyfikacji) ,<br> drugie to czarno-białe zdjęcie pokolorowane przez komputer. Wskaż prawdziwe zdjęcie.</h4></span>
-
-                                <?php
-                                require_once "./formCreator.php";
-
-
-                                $formCreator = new formCreator();
-                                $paths = $formCreator->createForm();
-
-                                $i = 1;
-                                foreach($paths as $p){
-                                    $first = rand(0, 1);
-
-                                    echo '<div class="row">';
-
-                                    if($first){
-                                        echo '
-                                         <div class="col-sm-6">
-                                            <div class="card text-center choice">
-                                                <label>
-                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="1">
-                                                    <img src='.$p[0].' class="card-img-top" alt="...">
-                                                </label>
-                                            </div>
-                                         </div>
-                                         
-                                         <div class="col-sm-6">
-                                            <div class="card text-center choice">
-                                                <label>
-                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="2">
-                                                    <img src='.$p[1].' class="card-img-top" alt="...">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    ';
-                                    }else{
-                                        echo '
-                                    
-                                        <div class="col-sm-6">
-                                            <div class="card text-center choice">
-                                                <label>
-                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="2">
-                                                    <img src='.$p[1].' class="card-img-top" alt="...">
-                                                </label>
-                                            </div>
-                                         </div>
-                                         
-                                         <div class="col-sm-6">
-                                            <div class="card text-center choice">
-                                                <label>
-                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="1">
-                                                    <img src='.$p[0].' class="card-img-top" alt="...">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    ';
-
-
-                                    }
-                                    echo '</div>';
-                                $i++;
-
-                                }
-
-                                ?>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block marginTop">Prześlij</button>
-                            </form>
+                            <img src="https://i.imgflip.com/21x765.jpg" alt="dupa">
+<!--                            <form class="form-inline justify-content-center" action="getForm.php" method="post">-->
+<!--                                <span class="badge badge-secondary"><h4>Jedno ze 2 poniżej to prawdziwe zdjęcie (kolorowe bez modyfikacji) ,<br> drugie to czarno-białe zdjęcie pokolorowane przez komputer. Wskaż prawdziwe zdjęcie.</h4></span>-->
+<!---->
+<!--                                --><?php
+//                                require_once "./formCreator.php";
+//
+//
+//                                $formCreator = new formCreator();
+//                                $paths = $formCreator->createForm();
+//
+//                                $i = 1;
+//                                foreach($paths as $p){
+//                                    $first = rand(0, 1);
+//
+//                                    echo '<div class="row">';
+//
+//                                    if($first){
+//                                        echo '
+//                                         <div class="col-sm-6">
+//                                            <div class="card text-center choice">
+//                                                <label>
+//                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="1">
+//                                                    <img src='.$p[0].' class="card-img-top" alt="...">
+//                                                </label>
+//                                            </div>
+//                                         </div>
+//
+//                                         <div class="col-sm-6">
+//                                            <div class="card text-center choice">
+//                                                <label>
+//                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="2">
+//                                                    <img src='.$p[1].' class="card-img-top" alt="...">
+//                                                </label>
+//                                            </div>
+//                                        </div>
+//                                    ';
+//                                    }else{
+//                                        echo '
+//
+//                                        <div class="col-sm-6">
+//                                            <div class="card text-center choice">
+//                                                <label>
+//                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="2">
+//                                                    <img src='.$p[1].' class="card-img-top" alt="...">
+//                                                </label>
+//                                            </div>
+//                                         </div>
+//
+//                                         <div class="col-sm-6">
+//                                            <div class="card text-center choice">
+//                                                <label>
+//                                                    <input type="radio" name="pair'.$i.'" id="pair'.$i.'" value="1">
+//                                                    <img src='.$p[0].' class="card-img-top" alt="...">
+//                                                </label>
+//                                            </div>
+//                                        </div>
+//                                    ';
+//
+//
+//                                    }
+//                                    echo '</div>';
+//                                $i++;
+//
+//                                }
+//
+//                                ?>
+<!--                                <button type="submit" class="btn btn-primary btn-lg btn-block marginTop">Prześlij</button>-->
+<!--                            </form>-->
                         </div>
                     </div>
                     
