@@ -18,7 +18,8 @@
                         <div class="card-body">
 
                             <form class="form-inline justify-content-center" action="getForm.php" method="post">
-                                <span class="badge badge-secondary"><h4>Jedno ze 2 poniżej to prawdziwe zdjęcie (kolorowe bez modyfikacji) ,<br> drugie to czarno-białe zdjęcie pokolorowane przez komputer. Wskaż prawdziwe zdjęcie.</h4></span>
+                                <span class="badge badge-secondary"><h4>Jedno ze 2 poniżej to prawdziwe zdjęcie (kolorowe bez modyfikacji) ,
+                                        <br> drugie to czarno-białe zdjęcie pokolorowane przez komputer. Wskaż prawdziwe zdjęcie.</h4></span>
 
                                 <?php
                                 require_once "./formCreator.php";

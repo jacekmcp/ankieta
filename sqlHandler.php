@@ -28,6 +28,25 @@ class sqlHandler{
     }
 
 
+    public function executeInsertQuery($query){
+        if ($this->conn->query($query) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $query . "<br>" . $this->conn->error;
+        }
+    }
+
+    public function executeUpdateQuery($q){
+        print_r($q);
+        if ($this->conn->query($q) === TRUE) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $this->conn->error;
+        }
+    }
+
+
+
     public function getSetByAlgType($algType){
 
         $q = "SELECT * FROM photos WHERE `type` = ".$algType;
