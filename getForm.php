@@ -11,19 +11,19 @@ require_once "sqlHandler.php";
 
 $sqlHandler = new sqlHandler();
 
-$algTypes = ['Iizuka', 'Zhang', 'Larsson'];
+//$algTypes = ['Iizuka', 'Zhang', 'Larsson'];
+//
+//$j = 0;
+//foreach ($algTypes as $t) {
+//    for ($i=1; $i<25; $i++){
+//        $j++;
+//        $q = "INSERT INTO ankieta_kasi.singleResults (id,algType, imgId, truth, recolorized) VALUES (".$j.",'".$t."', ".$i.", 0, 0)";
+//        $sqlHandler->executeInsertQuery($q);
+//    }
+//}
 
-$j = 0;
-foreach ($algTypes as $t) {
-    for ($i=1; $i<25; $i++){
-        $j++;
-        $q = "INSERT INTO ankieta_kasi.singleResults (id,algType, imgId, truth, recolorized) VALUES (".$j.",'".$t."', ".$i.", 0, 0)";
-        $sqlHandler->executeInsertQuery($q);
-    }
-}
 
 
-/*
 
 $truth = 0;
 $recolorized = 0;
