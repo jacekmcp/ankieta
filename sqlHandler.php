@@ -122,7 +122,7 @@ class sqlHandler{
                 if($count < 480) return $row['algType'];
             }
 
-        die('ankieta juz sie zakonczyla, czekamy na wyniki a Jacek to super mega software developer :)');
+        die('Ankieta już się zakończyła, dziękuję za wypełnienie.');
         } else {
             echo "0 results";
         }
